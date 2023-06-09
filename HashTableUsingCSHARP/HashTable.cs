@@ -34,6 +34,21 @@ namespace HashTableUsingCSHARP
             newNode.Next = Values[arrayIndex];
             Values[arrayIndex] = newNode;
         }
-
+        public void Display()
+        {
+            for (int index = 0; index < Values.Length; index++)
+            {
+                Node<T> temp = Values[index];
+                Console.Write($"Index {index} : ");
+                while (temp != null)
+                {
+                    Console.Write(temp.Temp + " -> ");
+                    temp = temp.Next;
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
+
+  

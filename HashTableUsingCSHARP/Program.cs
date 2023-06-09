@@ -12,7 +12,7 @@
             hashTable.AddOperation("Vishnu");
             hashTable.AddOperation("Prathuysha");
 
-            Console.Write(hashTable.AddOperation);
+            hashTable.Display();
         }
     }
 }
