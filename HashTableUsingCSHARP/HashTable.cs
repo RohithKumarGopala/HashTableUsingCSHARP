@@ -34,7 +34,7 @@ namespace HashTableUsingCSHARP
             newNode.Next = Values[arrayIndex];
             Values[arrayIndex] = newNode;
         }
-        public void Display()
+        public void DisplayOperation()
         {
             for (int index = 0; index < Values.Length; index++)
             {
@@ -48,7 +48,30 @@ namespace HashTableUsingCSHARP
                 Console.WriteLine();
             }
         }
+        public void SearchOperation(T data)
+        {
+            int arrayIndex = Math.Abs(data.GetHashCode()) % Values.Length;
+            Node<T> tempNode = Values[arrayIndex];
+            if (tempNode == null)
+            {
+                Console.WriteLine($"{data} not found");
+                return;
+            }
+
+            while (!tempNode.Temp.Equals(data))
+            {
+                if (tempNode.Next == null)
+                {
+                    Console.WriteLine($"{data} not found");
+                    return;
+                }
+                tempNode = tempNode.Next;
+            }
+
+            Console.WriteLine($"{data} is present at {arrayIndex} index in the ");
+        }
     }
 }
+
 
   

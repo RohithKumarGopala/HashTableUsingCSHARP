@@ -12,7 +12,8 @@
             hashTable.AddOperation("Vishnu");
             hashTable.AddOperation("Prathuysha");
 
-            hashTable.Display();
+            //hashTable.DisplayOperation();
+            hashTable.SearchOperation("Shoban");
         }
     }
 }
