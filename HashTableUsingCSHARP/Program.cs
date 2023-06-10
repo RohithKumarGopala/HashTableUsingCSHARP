@@ -13,7 +13,12 @@
             hashTable.AddOperation("Prathuysha");
 
             //hashTable.DisplayOperation();
-            hashTable.SearchOperation("Shoban");
+            //hashTable.SearchOperation("Shoban");
+
+            string x = "Rohith";
+            hashTable.DeleteOperation("x");
+            Console.WriteLine("The String " + x + " Is Deleted Successfully.");
+            
         }
     }
 }

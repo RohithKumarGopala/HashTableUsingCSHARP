@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,6 +70,29 @@ namespace HashTableUsingCSHARP
             }
 
             Console.WriteLine($"{data} is present at {arrayIndex} index in the ");
+        }
+        public void DeleteOperation(T value)
+        {
+            int arrayIndex = Math.Abs(value.GetHashCode()) % Values.Length;
+            Node<T> temp = Values[arrayIndex];
+
+            if (Values[arrayIndex] != null)
+            {
+                if (Values[arrayIndex].Temp.Equals(value))
+                {
+                    Values[arrayIndex] = Values[arrayIndex].Next;
+                }
+            }
+
+            if (temp != null)
+            {
+                if (temp.Temp.Equals(value))
+                {
+
+                    Values[arrayIndex] = temp.Next;
+                }
+            }
+
         }
     }
 }
